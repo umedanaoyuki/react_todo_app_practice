@@ -1,8 +1,15 @@
+import axios from "axios";
 
-function App() {
+export default function App() {
+
+  const fetchData = async () => {
+    const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+    return console.log(response);
+  };
+
+fetchData();
+
   return (
-    <p>TestReactApp</p>
+    <h1>Hello React</h1>
   );
 }
-
-export default App;
